@@ -25,3 +25,7 @@ aws lambda list-functions
 
 # list IAM users
 aws iam list-users
+
+# Get only instances IDs.
+#aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId' – JSON
+#aws ec2 describe-instances | yq '.Reservations[].Instances[].InstanceId' - YAML
